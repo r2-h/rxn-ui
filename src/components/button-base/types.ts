@@ -1,4 +1,4 @@
-export type ButtonVariant = 'primary' | 'default' | 'danger' | 'secondary'
+export type ButtonVariant = 'primary' | 'default' | 'danger' | 'secondary' | 'ghost'
 export type ButtonShape = 'radius-default' | 'radius-circle'
 
 export type ButtonProps = {
@@ -6,5 +6,5 @@ export type ButtonProps = {
   variant?: ButtonVariant
   shape?: ButtonShape
   type?: 'button' | 'submit' | 'reset'
-  is?: 'button' | 'a'
+  is?: 'button' | 'a' | 'RouterLink'
 }

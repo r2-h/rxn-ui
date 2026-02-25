@@ -90,4 +90,19 @@ const {
   box-shadow: var(--shadow-inset);
   color: var(--muted-foreground);
 }
+.ghost {
+  border: none;
+  box-shadow: none;
+  transition: none;
+  &:hover:not(:disabled) {
+    background-color: light-dark(
+      oklch(from var(--background) calc(l * 0.975) c h),
+      oklch(from var(--background) calc(l * 0.92) c h)
+    );
+  }
+  &:active {
+    box-shadow: none;
+    scale: none;
+  }
+}
 </style>
