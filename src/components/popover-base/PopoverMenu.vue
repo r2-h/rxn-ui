@@ -38,10 +38,9 @@ const { popoverId } = usePopoverContext()
   margin-top: 1rem;
   text-align: start;
   padding: 1.5rem;
-  border: 1px solid var(--color-zinc-700);
+  border: 1px solid var(--color-border-default);
   background-color: var(--background);
   border-radius: var(--radius-md);
-
   min-width: 10rem;
 }
 

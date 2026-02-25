@@ -328,6 +328,7 @@
     --color-shadow: light-dark(oklch(0% 0 0 / 0.2), oklch(0 0 0 / 0.75));
     --color-highlight: light-dark(oklch(100% 0 0 / 1), oklch(100% 0 0 / 0.2));
     --color-border: light-dark(var(--color-zinc-200), var(--color-zinc-950));
+    --color-border-default: light-dark(var(--color-zinc-300), var(--color-zinc-700));
     --color-danger: light-dark(var(--color-red-600), var(--color-red-400));
     --color-warning: light-dark(var(--color-orange-600), var(--color-orange-400));
     --color-success: light-dark(var(--color-green-600), var(--color-green-400));
