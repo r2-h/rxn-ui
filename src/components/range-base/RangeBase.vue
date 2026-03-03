@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import { useVars } from '../../composables/useWars'
+import { useVars } from '../../composables/useVars'
 import { cssSizeToNumber, cssValueToUnit } from '../../utils/cssParser'
 import { mergeDefaultProps } from '../../utils/mergeDefaultProps'
 import type { RangeBaseProps, RangeBaseVars } from './types'
@@ -15,6 +15,7 @@ const {
   ...props
 } = defineProps<RangeBaseProps>()
 
+// todo: проверить реактивность
 const vars = computed(() =>
   mergeDefaultProps<RangeBaseVars>({ thumb: { size: '2rem' } }, props.vars),
 )

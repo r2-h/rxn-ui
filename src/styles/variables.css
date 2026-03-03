@@ -324,7 +324,10 @@
       inset 2px 2px 6px var(--color-shadow), inset -2px -2px 6px var(--color-highlight);
 
     --background: light-dark(var(--color-zinc-200), var(--color-zinc-900));
+    --surface: var(--background);
+    --muted: light-dark(var(--color-zinc-300), var(--color-zinc-700));
     --foreground: light-dark(var(--color-zinc-700), var(--color-zinc-100));
+    --muted-foreground: light-dark(var(--color-zinc-600), var(--color-zinc-400));
     --color-shadow: light-dark(oklch(0% 0 0 / 0.2), oklch(0 0 0 / 0.75));
     --color-highlight: light-dark(oklch(100% 0 0 / 1), oklch(100% 0 0 / 0.2));
     --color-border: light-dark(var(--color-zinc-200), var(--color-zinc-950));
@@ -337,9 +340,6 @@
       oklch(from var(--color-indigo-600) l calc(c * 0.75) h),
       var(--color-indigo-400)
     );
-    --primary-foreground: var(--color-neutral-200);
-    --muted: light-dark(var(--color-zinc-300), var(--color-zinc-700));
-    --muted-foreground: light-dark(var(--color-zinc-600), var(--color-zinc-400));
 
     --animate-spin: spin 1s linear infinite;
     --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;

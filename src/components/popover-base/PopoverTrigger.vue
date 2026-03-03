@@ -9,9 +9,3 @@ const { popoverId } = usePopoverContext()
     <slot />
   </button>
 </template>
-
-<style scoped>
-/*
-<a interestfor="popover--comments" style="anchor-name: --comments" href="#">24 comments</a>
-*/
-</style>

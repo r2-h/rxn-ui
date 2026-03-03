@@ -9,10 +9,11 @@ const { popoverId } = usePopoverContext()
 <template>
   <div popover :id="popoverId" :style="{ positionAnchor: `--${popoverId}` }" class="menu">
     <button
-      class="button"
       v-for="op in options"
       :key="op.action"
-      :popovertarget="op.closeOnClick ? popoverId : null"
+      class="button"
+      :command="op.closeOnClick ? 'hide-popover' : ''"
+      :commandfor="popoverId"
       @click="op.handler"
     >
       <component v-if="op.icon" :is="op.icon" class="icon" />
@@ -27,23 +28,31 @@ const { popoverId } = usePopoverContext()
   position-area: bottom span-left;
   margin-right: -2rem;
 }
+@position-try --bottom-right {
+  position-area: bottom span-right;
+}
+@position-try --top-right {
+  position-area: top span-right;
+  margin-bottom: 1rem;
+}
+@position-try --top-left {
+  position-area: top span-left;
+  margin-bottom: 1rem;
+}
 
 .menu {
   position-area: bottom;
-  position-try-fallbacks: --bottom-left;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  row-gap: 1.5rem;
+  position-try-fallbacks:
+    flip-block, flip-inline, --bottom-left, --bottom-right, --top-right, --top-left;
   margin-top: 1rem;
   text-align: start;
   padding: 1.5rem;
   border: 1px solid var(--color-border-default);
   background-color: var(--background);
   border-radius: var(--radius-md);
+  color: var(--foreground);
   min-width: 10rem;
 }
-
 .button {
   background-color: inherit;
   cursor: pointer;
@@ -51,8 +60,10 @@ const { popoverId } = usePopoverContext()
   align-items: center;
   column-gap: 1rem;
   line-height: 1cap;
+  & + .button {
+    margin-top: 1.5rem;
+  }
 }
-
 .icon {
   width: 1.8rem;
   aspect-ratio: 1;

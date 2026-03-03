@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@14..36,300;14..36,400;14..36,500;14..36,600;14..36,700&display=swap');
-@import 'variables.css';
+@import './variables.css';
 @layer theme, base, components, utilities;
 
 @layer base {

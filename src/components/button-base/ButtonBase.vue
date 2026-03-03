@@ -3,7 +3,7 @@ import type { ButtonProps } from './types'
 
 const {
   variant = 'default',
-  shape = 'radius-default',
+  shape = 'shape-default',
   is = 'button',
   type = 'button',
 } = defineProps<ButtonProps>()
@@ -23,6 +23,7 @@ const {
 <style scoped>
 .btn {
   display: inline-flex;
+  column-gap: 0.5rem;
   width: fit-content;
   text-wrap: nowrap;
   font-weight: 500;
@@ -51,15 +52,20 @@ const {
     opacity: 0.85;
   }
 }
-.radius-default {
+.shape-default {
   border-radius: var(--radius-xl);
   padding-inline: 1.6rem;
   height: 4.8rem;
 }
-.radius-circle {
-  border-radius: 5rem;
-  padding: 1rem;
-  min-width: 4rem;
+.shape-small {
+  padding-inline: 1rem;
+  border-radius: var(--radius-md);
+  height: 3.5rem;
+}
+.shape-icon {
+  color: var(--foreground);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
   aspect-ratio: 1;
 }
 .primary {
@@ -94,15 +100,22 @@ const {
   border: none;
   box-shadow: none;
   transition: none;
+  background-color: inherit;
   &:hover:not(:disabled) {
     background-color: light-dark(
-      oklch(from var(--background) calc(l * 0.975) c h),
-      oklch(from var(--background) calc(l * 0.92) c h)
+      oklch(from var(--surface) calc(l * 0.975) c h),
+      oklch(from var(--surface) calc(l * 1.1) c h)
     );
   }
   &:active {
     box-shadow: none;
     scale: none;
   }
+}
+
+:deep(svg) {
+  width: 1.8rem;
+  height: 1.8rem;
+  flex-shrink: 0;
 }
 </style>
