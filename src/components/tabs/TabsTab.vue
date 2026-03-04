@@ -33,6 +33,8 @@ button {
   z-index: 10;
   font-size: var(--text-sm);
   font-weight: var(--font-weight-medium);
+  background-color: inherit;
+
   &:focus-visible {
     outline: 0.2rem solid var(--foreground);
     outline-offset: 0.2rem;

@@ -12,7 +12,7 @@ const { currentTheme, toggleTheme } = useTheme()
     @click="toggleTheme()"
     :aria-label="`Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} theme`"
     class="theme-toggle-btn"
-    shape="radius-circle"
+    shape="shape-icon"
   >
     <MoonIcon v-if="currentTheme === 'dark'" class="moon" />
     <SunIcon v-else />

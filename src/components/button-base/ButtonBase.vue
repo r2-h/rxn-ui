@@ -30,26 +30,10 @@ const {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border: 0.3rem solid var(--color-border);
   background: var(--background);
-  box-shadow: var(--shadow-raised);
-  transition:
-    scale 0.2s ease-in-out,
-    background-color 0.2s ease-in-out,
-    color 0.2s ease-in-out,
-    box-shadow 0.1s ease-in-out,
-    border-color 0.1s ease-in-out;
-
-  &:active {
-    box-shadow: var(--shadow-inset);
-    scale: 97%;
-  }
   &:focus-visible {
     outline: 0.2rem solid var(--foreground);
     outline-offset: 0.2rem;
-  }
-  &:hover:not(:disabled) {
-    opacity: 0.85;
   }
 }
 .shape-default {
@@ -58,15 +42,34 @@ const {
   height: 4.8rem;
 }
 .shape-small {
-  padding-inline: 1rem;
-  border-radius: var(--radius-md);
-  height: 3.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: none;
 }
 .shape-icon {
   color: var(--foreground);
   border-radius: var(--radius-md);
   padding: 0.5rem;
   aspect-ratio: 1;
+}
+
+.primary,
+.default,
+.danger {
+  border: 0.3rem solid var(--color-border);
+  box-shadow: var(--shadow-raised);
+  transition:
+    scale 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out,
+    box-shadow 0.1s ease-in-out,
+    border-color 0.1s ease-in-out;
+  &:active {
+    box-shadow: var(--shadow-inset);
+    scale: 97%;
+  }
+  &:hover:not(:disabled) {
+    opacity: 0.85;
+  }
 }
 .primary {
   color: var(--primary);
@@ -91,25 +94,13 @@ const {
     color-mix(in oklch, var(--color-danger), transparent 78%)
   );
 }
-.secondary {
-  border: none;
-  box-shadow: var(--shadow-inset);
-  color: var(--muted-foreground);
-}
 .ghost {
-  border: none;
-  box-shadow: none;
-  transition: none;
   background-color: inherit;
   &:hover:not(:disabled) {
     background-color: light-dark(
       oklch(from var(--surface) calc(l * 0.975) c h),
       oklch(from var(--surface) calc(l * 1.1) c h)
     );
-  }
-  &:active {
-    box-shadow: none;
-    scale: none;
   }
 }
 

@@ -1,4 +1,4 @@
-export type ButtonVariant = 'primary' | 'default' | 'danger' | 'secondary' | 'ghost'
+export type ButtonVariant = 'primary' | 'default' | 'danger' | 'ghost'
 export type ButtonShape = 'shape-default' | 'shape-icon' | 'shape-small'
 
 export type ButtonProps = {

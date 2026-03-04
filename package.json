@@ -6,10 +6,7 @@
   "private": false,
   "type": "module",
   "author": "Artur Hareksian <artharexian@gmail.com> (https://github.com/r2-h)",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/r2-h/artharexian-ui.git"
-  },
+  "repository": "r2-h/rxn-ui",
   "bin": {
     "rxn-ui": "cli/index.mjs"
   },

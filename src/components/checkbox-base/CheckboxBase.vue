@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { type Component } from 'vue'
 
-import CheckIcon from '../assets/CheckIcon.vue'
+import CheckIcon from '../../assets/CheckIcon.vue'
 
 withDefaults(defineProps<{ isDisabled?: boolean; icon?: Component }>(), { icon: CheckIcon })
 const modelValue = defineModel({ default: false })

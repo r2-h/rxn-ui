@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import CheckboxBase from './components/CheckboxBase.vue'
-import SwitchBase from './components/SwitchBase.vue'
-import ThemeToggle from './components/ThemeToggle.vue'
 import ButtonBase from './components/button-base/ButtonBase.vue'
 import CardBase from './components/card-base/CardBase.vue'
 import CardContent from './components/card-base/CardContent.vue'
@@ -9,12 +6,15 @@ import CardDescription from './components/card-base/CardDescription.vue'
 import CardFooter from './components/card-base/CardFooter.vue'
 import CardHeader from './components/card-base/CardHeader.vue'
 import CardTitle from './components/card-base/CardTitle.vue'
+import CheckboxBase from './components/checkbox-base/CheckboxBase.vue'
 import InputBase from './components/input-base/InputBase.vue'
 import RangeBase from './components/range-base/RangeBase.vue'
+import SwitchBase from './components/switch-base/SwitchBase.vue'
 import TabsBase from './components/tabs/TabsBase.vue'
 import TabsList from './components/tabs/TabsList.vue'
 import TabsPanel from './components/tabs/TabsPanel.vue'
 import TabsTab from './components/tabs/TabsTab.vue'
+import ThemeToggle from './components/theme-toggle/ThemeToggle.vue'
 </script>
 
 <template>
@@ -50,7 +50,7 @@ import TabsTab from './components/tabs/TabsTab.vue'
       <div style="margin: 2.4rem">
         <CardBase>
           <CardHeader>
-            <TabsBase>
+            <TabsBase default-value="overview">
               <TabsList>
                 <TabsTab value="overview">Overview</TabsTab>
                 <TabsTab value="user">User</TabsTab>
